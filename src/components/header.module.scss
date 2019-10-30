@@ -1,0 +1,30 @@
+.header {
+  padding: 0em 2em;
+  display: grid;
+  min-height: 100px;
+  grid-auto-flow: column;
+  background-color: lightblue;
+}
+
+.logo {
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.links {
+  display: grid;
+  justify-content: end;
+  align-content: center;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+
+  li {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+    }
+  }
+}
