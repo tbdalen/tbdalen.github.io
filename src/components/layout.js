@@ -2,12 +2,14 @@ import React from "react"
 
 import Header from "./header"
 import Footer from "./footer"
+import "../styles/vendors/normalize.scss"
+import styles from "./layout.module.scss"
 
 const Layout = props => {
   return (
-    <div>
+    <div className={styles.container}>
       <Header />
-      {props.children}
+      <div className={styles.site_content}>{props.children}</div>
       <Footer />
     </div>
   )
