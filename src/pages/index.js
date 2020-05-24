@@ -8,6 +8,7 @@ import FPText from "../components/typist/typist"
 import Animation from "../components/animation/animation"
 
 import { TimelineLite, CSSPlugin, AttrPlugin } from "gsap/all"
+import Div100vh from "react-div-100vh"
 
 import styles from "./index.module.scss"
 
@@ -40,37 +41,39 @@ class indexPage extends Component {
 
   render() {
     return (
-      <div className={styles.container}>
-        <div className={styles.logo}>
-          <Logo />
-        </div>
-        <div className={styles.typistContainer}>
-          <div className={styles.typist}>
-            <FPText />
+      <Div100vh>
+        <div className={styles.container}>
+          <div className={styles.logo}>
+            <Logo />
+          </div>
+          <div className={styles.typistContainer}>
+            <div className={styles.typist}>
+              <FPText />
+            </div>
+          </div>
+          <div ref={div => (this.logoContainer = div)} className={styles.photo}>
+            <BackgroundPhoto />
+          </div>
+          <div className={styles.containerAnimation}>
+            <div className={styles.animation}>
+              <Animation />
+            </div>
+          </div>
+          <div
+            ref={div => (this.logoContainerTwo = div)}
+            className={styles.photoEdge}
+          >
+            <BackgroundPhoto />
+          </div>
+          <div className={styles.box}></div>
+          <div className={styles.main}>
+            <MainNavigation />
+          </div>
+          <div className={styles.social}>
+            <SocialNavigation />
           </div>
         </div>
-        <div ref={div => (this.logoContainer = div)} className={styles.photo}>
-          <BackgroundPhoto />
-        </div>
-        <div className={styles.containerAnimation}>
-          <div className={styles.animation}>
-            <Animation />
-          </div>
-        </div>
-        <div
-          ref={div => (this.logoContainerTwo = div)}
-          className={styles.photoEdge}
-        >
-          <BackgroundPhoto />
-        </div>
-        <div className={styles.box}></div>
-        <div className={styles.main}>
-          <MainNavigation />
-        </div>
-        <div className={styles.social}>
-          <SocialNavigation />
-        </div>
-      </div>
+      </Div100vh>
     )
   }
 }

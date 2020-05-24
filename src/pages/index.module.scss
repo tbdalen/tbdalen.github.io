@@ -1,7 +1,7 @@
 .container {
   background: #b0b3b3;
   display: grid;
-  min-height: 100vh;
+  height: 100vh;
   grid-template-columns: repeat(17, 1fr);
   grid-template-rows: repeat(12, 1fr);
   grid-gap: 1px 1px;
