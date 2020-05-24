@@ -1,7 +1,6 @@
 .container {
   background: #b0b3b3;
-  min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-  min-height: -webkit-fill-available;
+  height: 100vh;
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(17, 1fr);
