@@ -1,14 +1,14 @@
 import Typography from "typography"
-import elkGlenTheme from "typography-theme-elk-glen"
+import lincolnTheme from "typography-theme-lincoln"
 
-elkGlenTheme.overrideThemeStyles = () => ({
+lincolnTheme.overrideThemeStyles = () => ({
   a: {
     textShadow: `none`,
     backgroundImage: `none`,
   },
 })
 
-const typography = new Typography(elkGlenTheme)
+const typography = new Typography(lincolnTheme)
 
 // Export helper functions
 export const { scale, rhythm, options } = typography
