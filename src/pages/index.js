@@ -7,9 +7,12 @@ import SocialNavigation from "../components/social-nav/social-nav"
 import FPText from "../components/typist/typist"
 import Animation from "../components/animation/animation"
 
-import { TimelineLite } from "gsap/all"
+import { TimelineLite, CSSPlugin, AttrPlugin } from "gsap/all"
 
 import styles from "./index.module.scss"
+
+//without this line, CSSPlugin and AttrPlugin may get dropped by your bundler...
+const plugins = [CSSPlugin, AttrPlugin]
 
 class indexPage extends Component {
   constructor(props) {
