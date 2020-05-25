@@ -12,15 +12,8 @@ import Animation from "../components/animation/animation"
 import { TimelineLite, CSSPlugin, AttrPlugin } from "gsap/all"
 import Div100vh from "react-div-100vh"
 
-var Hammer = require("react-hammerjs")
-
 //without this line, CSSPlugin and AttrPlugin may get dropped by your bundler...
 const plugins = [CSSPlugin, AttrPlugin]
-
-let hammertime = new Hammer(myElement, myOptions)
-hammertime.on("pan", function(ev) {
-  console.log(ev)
-})
 
 class indexPage extends Component {
   constructor(props) {
