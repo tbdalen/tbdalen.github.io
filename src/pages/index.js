@@ -7,6 +7,7 @@ import BackgroundPhoto from "../components/photo/photo"
 import FPText from "../components/typist/typist"
 import Animation from "../components/animation/animation"
 
+import { Helmet } from "react-helmet"
 import { TimelineLite, CSSPlugin, AttrPlugin } from "gsap/all"
 
 //without this line, CSSPlugin and AttrPlugin may get dropped by your bundler...
@@ -39,6 +40,11 @@ class indexPage extends Component {
   render() {
     return (
       <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>TBD</title>
+          <link rel="canonical" href="https://tbdalen.github.io" />
+        </Helmet>
         <div className={styles.typistContainer}>
           <div className={styles.typist}>
             <FPText />
