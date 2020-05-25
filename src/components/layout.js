@@ -1,5 +1,6 @@
 import React from "react"
 
+import "../styles/vendors/normalize.scss"
 import Div100vh from "react-div-100vh"
 import styles from "./layout.module.scss"
 
