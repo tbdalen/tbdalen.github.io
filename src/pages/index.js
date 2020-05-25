@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 
+import styles from "./index.module.scss"
+
 import Logo from "../components/logo"
 import BackgroundPhoto from "../components/photo/photo"
 import MainNavigation from "../components/main-nav"
@@ -10,10 +12,15 @@ import Animation from "../components/animation/animation"
 import { TimelineLite, CSSPlugin, AttrPlugin } from "gsap/all"
 import Div100vh from "react-div-100vh"
 
-import styles from "./index.module.scss"
+var Hammer = require("react-hammerjs")
 
 //without this line, CSSPlugin and AttrPlugin may get dropped by your bundler...
 const plugins = [CSSPlugin, AttrPlugin]
+
+let hammertime = new Hammer(myElement, myOptions)
+hammertime.on("pan", function(ev) {
+  console.log(ev)
+})
 
 class indexPage extends Component {
   constructor(props) {

@@ -22,6 +22,7 @@
     "react": "^16.13.1",
     "react-div-100vh": "^0.3.8",
     "react-dom": "^16.13.1",
+    "react-hammerjs": "^1.0.1",
     "react-mt-svg-lines": "^0.9.1",
     "react-typist": "^2.0.5",
     "react-typography": "^0.16.19",
