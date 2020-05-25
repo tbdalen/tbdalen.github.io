@@ -9,12 +9,12 @@ const SocialNavigation = () => {
     <div className={styles.container}>
       <ul>
         <li>
-          <a href="www.github.com">
+          <a href="https://github.com/tbdalen/">
             <Github />
           </a>
         </li>
         <li>
-          <a href="www.linkedin.com">
+          <a href="https://www.instagram.com/mos1ka/">
             <LinkedIn />
           </a>
         </li>
