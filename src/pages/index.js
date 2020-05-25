@@ -26,12 +26,13 @@ class indexPage extends Component {
   componentDidMount() {
     // create logo tween
     this.logoTween = new TimelineLite({ paused: false })
-      .from(this.logoContainer, 2, { y: 200, delay: 3 })
+      .from(this.logoContainer, 2, { y: 200, delay: 3, opacity: 0 })
       .from(
         this.logoContainerTwo,
         2,
         {
           y: -200,
+          opacity: 0,
         },
         "-=2"
       )
