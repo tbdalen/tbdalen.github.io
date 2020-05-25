@@ -23,7 +23,10 @@ const FPText = () => {
           Welcome to my humble abode.
           <Typist.Delay ms={2000} />
           <Typist.Backspace count={27} delay={200} />
-          My name is Tarjei and I like to build stuff
+          My name is Tarjei and I like to be creative
+          <Typist.Delay ms={2000} />
+          <Typist.Backspace count={43} delay={200} />
+          Scroll to learn more about me
         </Typist>
       </h1>
     </React.Fragment>

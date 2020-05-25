@@ -1,12 +1,13 @@
 import React from "react"
 
+import styles from "./workshop.module.scss"
+
 import Layout from "../components/layout"
 
 const workShopPage = () => {
   return (
     <Layout>
-      <h1>This is the workshop page</h1>
-      <p>..</p>
+      <div className={styles.card}>workshop</div>
     </Layout>
   )
 }

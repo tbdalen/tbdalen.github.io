@@ -1,12 +1,13 @@
 import React from "react"
 
+import styles from "./lounge.module.scss"
+
 import Layout from "../components/layout"
 
 const loungePage = () => {
   return (
     <Layout>
-      <h1>This is the lounge page</h1>
-      <p>..</p>
+      <div className={styles.card}>lounge</div>
     </Layout>
   )
 }
