@@ -1,14 +1,14 @@
 import React, { Component } from "react"
+import { Helmet } from "react-helmet"
+import { TimelineLite, CSSPlugin, AttrPlugin } from "gsap/all"
 
 import styles from "./index.module.scss"
 
 import Layout from "../components/layout"
-import BackgroundPhoto from "../components/photo/photo"
 import FPText from "../components/typist/typist"
 import Animation from "../components/animation/animation"
-
-import { Helmet } from "react-helmet"
-import { TimelineLite, CSSPlugin, AttrPlugin } from "gsap/all"
+import Avatar from "../components/avatar/avatar"
+import Background from "../components/background/background"
 
 //without this line, CSSPlugin and AttrPlugin may get dropped by your bundler...
 const plugins = [CSSPlugin, AttrPlugin]
@@ -26,13 +26,12 @@ class indexPage extends Component {
   componentDidMount() {
     // create logo tween
     this.logoTween = new TimelineLite({ paused: false })
-      .from(this.logoContainer, 2, { y: 200, delay: 3, opacity: 0 })
+      .from(this.logoContainer, 2, { y: 100, delay: 3 })
       .from(
         this.logoContainerTwo,
         2,
         {
-          y: -200,
-          opacity: 0,
+          y: -100,
         },
         "-=2"
       )
@@ -52,7 +51,7 @@ class indexPage extends Component {
           </div>
         </div>
         <div ref={div => (this.logoContainer = div)} className={styles.photo}>
-          <BackgroundPhoto />
+          <Avatar />
         </div>
         <div className={styles.containerAnimation}>
           <div className={styles.animation}>
@@ -63,7 +62,7 @@ class indexPage extends Component {
           ref={div => (this.logoContainerTwo = div)}
           className={styles.photoEdge}
         >
-          <BackgroundPhoto />
+          <Background />
         </div>
         <div className={styles.box}></div>
       </Layout>
