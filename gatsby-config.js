@@ -28,11 +28,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Tarjei B. Dalen`,
+        short_name: `tbd`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        background_color: `#F2F2F2`,
+        theme_color: `#1F1F1F`,
         display: `standalone`,
         icon: `static/favicon.png`,
       },
