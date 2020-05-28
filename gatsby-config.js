@@ -7,7 +7,7 @@ const path = require("path")
 
 module.exports = {
   siteMetadata: {
-    title: "TBD",
+    title: "Tarjei B. Dalen",
     titleTemplate: "Portfolio",
     description: "This is a portfolio made by Tarjei",
     url: "https://www.tbdalen.github.io", // No trailing slash allowed!
@@ -23,6 +23,18 @@ module.exports = {
       options: {
         name: "images",
         path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `GatsbyJS`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `static/favicon.png`,
       },
     },
     {

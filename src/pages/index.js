@@ -42,7 +42,7 @@ class indexPage extends Component {
       <Layout>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>TBD</title>
+          <title>Tarjei B. Dalen - Portfolio</title>
           <link rel="canonical" href="https://tbdalen.github.io" />
         </Helmet>
         <div className={styles.typistContainer}>

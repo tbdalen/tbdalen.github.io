@@ -4,7 +4,7 @@ import "../styles/vendors/normalize.scss"
 import Div100vh from "react-div-100vh"
 import styles from "./layout.module.scss"
 
-import Logo from "../components/logo"
+import Logo from "./logo/logo"
 import SocialNavigation from "../components/social-nav/social-nav"
 import MainNavigation from "../components/main-nav"
 
