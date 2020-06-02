@@ -7,7 +7,7 @@ const svgTry2 = () => {
     <SvgLines
       animate={true}
       duration={4000}
-      playback={"2 alternate both"}
+      playback={"2 both"}
       timinng={"ease-in-out"}
       fade={true}
     >

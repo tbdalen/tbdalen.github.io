@@ -6,16 +6,16 @@ const SvgTry = () => {
   return (
     <SvgLines
       animate={true}
-      duration={4000}
-      playback={"2 alternate both"}
-      timinng={"ease-in-out"}
+      duration={1000}
+      playback={"2 both"}
+      timinng={"ease-in"}
       fade={true}
     >
       <svg
         width="150"
         height="120"
         viewBox="0 0 882 721"
-        fill="none"
+        fill="black"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

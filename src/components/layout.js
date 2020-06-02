@@ -14,15 +14,17 @@ const Layout = props => {
   return (
     <Div100vh>
       <div className={styles.container}>
-        <div className={styles.logo}>
-          <Logo />
-        </div>
-        {props.children}
-        <div className={styles.main}>
-          <MainNavigation />
-        </div>
-        <div className={styles.social}>
-          <SocialNavigation />
+        <div className={styles.containerGrid}>
+          <div className={styles.logo}>
+            <Logo />
+          </div>
+          {props.children}
+          <div className={styles.main}>
+            <MainNavigation />
+          </div>
+          <div className={styles.social}>
+            <SocialNavigation />
+          </div>
         </div>
       </div>
     </Div100vh>

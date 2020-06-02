@@ -23,7 +23,7 @@ const FPText = () => {
           Welcome to my humble abode.
           <Typist.Delay ms={2000} />
           <Typist.Backspace count={27} delay={200} />
-          My name is Tarjei and I like to be creative
+          My name is Tarjei and I like being creative
           <Typist.Delay ms={2000} />
           <Typist.Backspace count={43} delay={200} />
           Scroll to learn more about me

@@ -4,17 +4,19 @@ import Img from "gatsby-image"
 import styles from "./background.module.scss"
 
 const Background = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "botanical.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+  const data = useStaticQuery(
+    graphql`
+      query {
+        placeholderImage: file(relativePath: { eq: "botanical.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }
-    }
-  `)
+    `
+  )
 
   return (
     <Img

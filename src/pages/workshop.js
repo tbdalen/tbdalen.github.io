@@ -4,12 +4,13 @@ import styles from "./workshop.module.scss"
 
 import Layout from "../components/layout"
 
-const workShopPage = () => {
-  return (
-    <Layout>
-      <div className={styles.card}>workshop</div>
-    </Layout>
-  )
+class WorkShopPage extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <div className={styles.card}>workshop</div>
+      </Layout>
+    )
+  }
 }
-
-export default workShopPage
+export default WorkShopPage

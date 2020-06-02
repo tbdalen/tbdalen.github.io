@@ -1,31 +1,89 @@
 import React, { Component } from "react"
 import { Helmet } from "react-helmet"
-import { TimelineLite, CSSPlugin, AttrPlugin } from "gsap/all"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 import styles from "./index.module.scss"
 
 import Layout from "../components/layout"
 import FPText from "../components/typist/typist"
-import Animation from "../components/animation/animation"
 import Avatar from "../components/avatar/avatar"
 import Background from "../components/background/background"
 
-//without this line, CSSPlugin and AttrPlugin may get dropped by your bundler...
-const plugins = [CSSPlugin, AttrPlugin]
+gsap.registerPlugin(ScrollTrigger)
+gsap.core.globals("ScrollTrigger", ScrollTrigger)
 
 class indexPage extends Component {
   constructor(props) {
     super(props)
     // logo container
     this.logoContainer = null
+    this.logoContainer2 = null
+    this.logoContainer3 = null
+    this.logoContainer4 = null
+    this.logoContainer5 = null
+    this.logoContainer6 = null
     // objects
-    this.logoTween = null
-    this.logoContainerTwo = null
+    this.logoTrigger = null
+    this.tl = gsap.timeline({
+      paused: true,
+      scrollTrigger: {
+        trigger: this.logoTrigger, // start the animation when ".box" enters the viewport (once)
+        scrub: true,
+        markers: true,
+      },
+    })
   }
 
   componentDidMount() {
     // create logo tween
-    this.logoTween = new TimelineLite({ paused: false })
+    this.tl
+      .to(this.logoContainer4, {
+        height: "100%",
+        autoAlpha: 1,
+        duration: 0.5,
+      })
+      .to(
+        this.logoContainer,
+        {
+          y: -200,
+          duration: 1,
+        },
+        "-=0.5"
+      )
+      .to(
+        this.logoContainer2,
+        {
+          y: 2000,
+          duration: 1,
+        },
+        "-=1"
+      )
+      .to(this.logoContainer3, {
+        duration: 1,
+      })
+      .fromTo(
+        this.logoContainer5,
+        {
+          y: 5000,
+          opacity: 1,
+          autoAlpha: 0,
+        },
+        { y: 0, autoAlpha: 1, duration: 1 },
+        "-=2"
+      )
+      .fromTo(
+        this.logoContainer6,
+        {
+          y: -5000,
+          opacity: 1,
+          autoAlpha: 0,
+        },
+        { y: 0, autoAlpha: 1, duration: 1 },
+        "-=2"
+      )
+  }
+  /* this.logoTween = new TimelineLite({ paused: false })
       .from(this.logoContainer, 2, { y: 100, delay: 3 })
       .from(
         this.logoContainerTwo,
@@ -34,38 +92,60 @@ class indexPage extends Component {
           y: -100,
         },
         "-=2"
-      )
-  }
+      )*/
 
   render() {
     return (
-      <Layout>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Tarjei B. Dalen - Portfolio</title>
-          <link rel="canonical" href="https://tbdalen.github.io" />
-        </Helmet>
-        <div className={styles.typistContainer}>
-          <div className={styles.typist}>
-            <FPText />
+      <div>
+        <Layout>
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>Tarjei B. Dalen</title>
+            <link rel="canonical" href="https://tbdalen.github.io" />
+          </Helmet>
+          <div className={styles.typistContainer}>
+            <div
+              ref={div => (this.logoContainer3 = div)}
+              className={styles.typist}
+            >
+              <FPText />
+            </div>
           </div>
-        </div>
-        <div ref={div => (this.logoContainer = div)} className={styles.photo}>
-          <Avatar />
-        </div>
-        <div className={styles.containerAnimation}>
-          <div className={styles.animation}>
-            <Animation />
+          <div className={styles.box}></div>
+          <div
+            ref={div => (this.logoTrigger = div)}
+            className={styles.trigger}
+          ></div>
+          <div ref={div => (this.logoContainer = div)} className={styles.photo}>
+            <Avatar />
           </div>
+          <div
+            ref={div => (this.logoContainer5 = div)}
+            className={styles.photo2}
+          >
+            <Background />
+          </div>
+          <div
+            ref={div => (this.logoContainer6 = div)}
+            className={styles.photoEdge2}
+          >
+            <Background />
+          </div>
+          <div
+            ref={div => (this.logoContainer2 = div)}
+            className={styles.photoEdge}
+          ></div>
+          <div
+            ref={div => (this.logoContainer4 = div)}
+            className={styles.color}
+          ></div>
+        </Layout>
+
+        <div ref={div => (this.logoTrigger = div)} className={styles.trigger}>
+          dfsdf
         </div>
-        <div
-          ref={div => (this.logoContainerTwo = div)}
-          className={styles.photoEdge}
-        >
-          <Background />
-        </div>
-        <div className={styles.box}></div>
-      </Layout>
+        <div className={styles.down}>fdsfsdf</div>
+      </div>
     )
   }
 }
