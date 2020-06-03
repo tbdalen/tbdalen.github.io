@@ -25,6 +25,7 @@ class indexPage extends Component {
     this.logoContainer4 = null
     this.logoContainer5 = null
     this.logoContainer6 = null
+
     // objects
     this.logoTrigger = null
 
@@ -86,16 +87,6 @@ class indexPage extends Component {
         "-=2"
       )
   }
-  /* this.logoTween = new TimelineLite({ paused: false })
-      .from(this.logoContainer, 2, { y: 100, delay: 3 })
-      .from(
-        this.logoContainerTwo,
-        2,
-        {
-          y: -100,
-        },
-        "-=2"
-      )*/
 
   render() {
     return (
@@ -107,6 +98,7 @@ class indexPage extends Component {
             <link rel="canonical" href="https://tbdalen.github.io" />
           </Helmet>
           <div className={styles.typistContainer}>
+            {this.props.children}
             <div
               ref={div => (this.logoContainer3 = div)}
               className={styles.typist}
