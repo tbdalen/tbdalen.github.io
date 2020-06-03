@@ -10,8 +10,10 @@ import FPText from "../components/typist/typist"
 import Avatar from "../components/avatar/avatar"
 import Background from "../components/background/background"
 
-gsap.registerPlugin(ScrollTrigger)
-gsap.core.globals("ScrollTrigger", ScrollTrigger)
+if (typeof window !== `undefined`) {
+  gsap.registerPlugin(ScrollTrigger)
+  gsap.core.globals("ScrollTrigger", ScrollTrigger)
+}
 
 class indexPage extends Component {
   constructor(props) {
@@ -25,6 +27,7 @@ class indexPage extends Component {
     this.logoContainer6 = null
     // objects
     this.logoTrigger = null
+
     this.tl = gsap.timeline({
       paused: true,
       scrollTrigger: {

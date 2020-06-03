@@ -28,6 +28,12 @@ body {
   margin: 0;
 }
 
+/* Document and Body - Prevent Address bar hiding in mobile browsers
+   ========================================================================== */
+html,
+body {
+  height: 100%;
+}
 /**
    * Add the correct display in IE 9-.
    */
