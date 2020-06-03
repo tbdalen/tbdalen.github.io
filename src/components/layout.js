@@ -2,6 +2,7 @@ import React from "react"
 
 import "../styles/vendors/normalize.scss"
 import styles from "./layout.module.scss"
+import Div100vh from "react-div-100vh"
 
 import Logo from "./logo/logo"
 import SocialNavigation from "../components/social-nav/social-nav"
@@ -11,7 +12,7 @@ import "../styles/vendors/normalize.scss"
 
 const Layout = props => {
   return (
-    <div className={styles.container}>
+    <Div100vh>
       <div className={styles.containerGrid}>
         <div className={styles.logo}>
           <Logo />
@@ -24,7 +25,7 @@ const Layout = props => {
           <SocialNavigation />
         </div>
       </div>
-    </div>
+    </Div100vh>
   )
 }
 

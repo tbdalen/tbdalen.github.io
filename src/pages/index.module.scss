@@ -10,6 +10,12 @@
   }
 }
 
+.container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
 .box {
   grid-column: 1/7;
   grid-row: 1/13;

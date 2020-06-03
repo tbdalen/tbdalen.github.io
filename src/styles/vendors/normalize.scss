@@ -16,6 +16,8 @@ html {
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
   overflow: hidden;
+  width: 100%;
+  background-color: red;
 }
 
 /* Sections
@@ -26,12 +28,13 @@ html {
    */
 
 body {
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
   height: 100%;
-  width: 100%;
   position: fixed;
-  margin: 0;
+  /* prevent overscroll bounce*/
+  background-color: lightgreen;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  /* iOS velocity scrolling */
 }
 
 /**

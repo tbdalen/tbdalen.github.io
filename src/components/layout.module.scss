@@ -1,16 +1,10 @@
-.container {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  background: #b0b3b3;
-}
-
 .containerGrid {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(17, 1fr);
   grid-template-rows: repeat(12, 1fr);
   grid-gap: 1px 1px;
+  background: #b0b3b3;
 }
 
 .logo {

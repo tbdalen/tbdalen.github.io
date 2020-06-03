@@ -26,7 +26,7 @@ const FPText = () => {
           My name is Tarjei and I like being creative
           <Typist.Delay ms={2000} />
           <Typist.Backspace count={43} delay={200} />
-          Scroll to learn more about me
+          Scroll to learn more
         </Typist>
       </h1>
     </React.Fragment>

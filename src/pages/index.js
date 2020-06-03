@@ -32,7 +32,6 @@ class indexPage extends Component {
       this.tl = gsap.timeline({
         paused: true,
         scrollTrigger: {
-          scroller: document.body,
           trigger: this.logoTrigger, // start the animation when ".box" enters the viewport (once)
           scrub: true,
           markers: true,
@@ -92,7 +91,7 @@ class indexPage extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.container}>
         <Layout>
           <Helmet>
             <meta charSet="utf-8" />
