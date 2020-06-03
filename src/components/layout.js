@@ -1,7 +1,6 @@
 import React from "react"
 
 import "../styles/vendors/normalize.scss"
-import Div100vh from "react-div-100vh"
 import styles from "./layout.module.scss"
 
 import Logo from "./logo/logo"
@@ -12,22 +11,20 @@ import "../styles/vendors/normalize.scss"
 
 const Layout = props => {
   return (
-    <Div100vh>
-      <div className={styles.container}>
-        <div className={styles.containerGrid}>
-          <div className={styles.logo}>
-            <Logo />
-          </div>
-          {props.children}
-          <div className={styles.main}>
-            <MainNavigation />
-          </div>
-          <div className={styles.social}>
-            <SocialNavigation />
-          </div>
+    <div className={styles.container}>
+      <div className={styles.containerGrid}>
+        <div className={styles.logo}>
+          <Logo />
+        </div>
+        {props.children}
+        <div className={styles.main}>
+          <MainNavigation />
+        </div>
+        <div className={styles.social}>
+          <SocialNavigation />
         </div>
       </div>
-    </Div100vh>
+    </div>
   )
 }
 

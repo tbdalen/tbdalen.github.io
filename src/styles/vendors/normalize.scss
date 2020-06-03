@@ -15,6 +15,7 @@ html {
   line-height: 1.15; /* 2 */
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
+  overflow: hidden;
 }
 
 /* Sections
@@ -25,16 +26,14 @@ html {
    */
 
 body {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  width: 100%;
+  position: fixed;
   margin: 0;
-  overflow-y: hidden;
 }
 
-/* Document and Body - Prevent Address bar hiding in mobile browsers
-   ========================================================================== */
-html,
-body {
-  height: 100%;
-}
 /**
    * Add the correct display in IE 9-.
    */

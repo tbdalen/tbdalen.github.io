@@ -28,15 +28,17 @@ class indexPage extends Component {
 
     // objects
     this.logoTrigger = null
-
-    this.tl = gsap.timeline({
-      paused: true,
-      scrollTrigger: {
-        trigger: this.logoTrigger, // start the animation when ".box" enters the viewport (once)
-        scrub: true,
-        markers: true,
-      },
-    })
+    if (typeof window !== `undefined`) {
+      this.tl = gsap.timeline({
+        paused: true,
+        scrollTrigger: {
+          scroller: document.body,
+          trigger: this.logoTrigger, // start the animation when ".box" enters the viewport (once)
+          scrub: true,
+          markers: true,
+        },
+      })
+    }
   }
 
   componentDidMount() {
