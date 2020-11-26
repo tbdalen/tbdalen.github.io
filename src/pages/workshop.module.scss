@@ -1,5 +1,17 @@
 .card {
-  grid-column: 6/12;
-  grid-row: 5/6;
+  grid-column: 1/18;
+  grid-row: 1/13;
   border: 1px solid #c4c4c4;
+}
+
+@font-face {
+  font-family: "CYRENE";
+  src: font-url("../../../static/fonts/Cyrene+Regular.otf") format("opentype");
+}
+
+.test {
+  padding-top: 5em;
+  font-family: "CYRENE";
+  font-size: 72px;
+  color: rgb(189, 93, 113);
 }

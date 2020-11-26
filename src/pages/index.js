@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import styles from "./index.module.scss"
 
 import Layout from "../components/layout"
-import FPText from "../components/typist/typist"
 import Avatar from "../components/avatar/avatar"
 import Background from "../components/background/background"
 
@@ -31,11 +30,6 @@ class indexPage extends Component {
     if (typeof window !== `undefined`) {
       this.tl = gsap.timeline({
         paused: true,
-        scrollTrigger: {
-          trigger: this.logoTrigger, // start the animation when ".box" enters the viewport (once)
-          scrub: true,
-          markers: true,
-        },
       })
     }
   }
@@ -98,15 +92,6 @@ class indexPage extends Component {
             <title>Tarjei B. Dalen</title>
             <link rel="canonical" href="https://tbdalen.github.io" />
           </Helmet>
-          <div className={styles.typistContainer}>
-            {this.props.children}
-            <div
-              ref={div => (this.logoContainer3 = div)}
-              className={styles.typist}
-            >
-              <FPText />
-            </div>
-          </div>
           <div className={styles.box}></div>
           <div
             ref={div => (this.logoTrigger = div)}

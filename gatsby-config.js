@@ -23,8 +23,11 @@ module.exports = {
       options: {
         name: "images",
         path: path.join(__dirname, `src`, `images`),
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
       },
     },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
