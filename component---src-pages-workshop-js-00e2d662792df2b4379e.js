@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{VVsL:function(n,e,a){"use strict";a.r(e);var o=a("q1tI"),r=a.n(o),t=a("Viyn"),c=a.n(t),s=a("Bl7J");e.default=function(){return r.a.createElement(s.a,null,r.a.createElement("div",{className:c.a.card},"workshop"))}},Viyn:function(n,e,a){n.exports={card:"workshop-module--card--3x-hd"}}}]);
-//# sourceMappingURL=component---src-pages-workshop-js-00e2d662792df2b4379e.js.map
